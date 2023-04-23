@@ -14,6 +14,7 @@ class Point {
 
     public :
         Point(const int &xpos, const int &ypos) {
+            cout << "point x : " << xpos << ", y :" << ypos << endl;
             x = xpos;
             y = ypos;
         };
@@ -30,6 +31,7 @@ class Rectangle {
 
     public :
         Rectangle(const int &x1, const int &y1, const int &x2, const int &y2) : up_left(x1, y1), low_right(x2, y2) {
+            cout << "rect x1 : " << x1 << ", y1 : " << y1 << ", x2 : " << x2 << ", y2: " << y2 << endl;
             int ul_x = up_left.get_point_x();
             int ul_y = up_left.get_point_y();
 
