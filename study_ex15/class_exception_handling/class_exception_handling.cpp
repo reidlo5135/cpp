@@ -20,7 +20,7 @@ void DepositException::show_exception_reason() {
 	std::cout << "[exception message : " << req_dep << " can't be input]" << "\n";
 }
 
-void Account::deposit(int money) throw (DepositException) {
+void Account::deposit(int money) {
 	if(money < 0) {
 		DepositException expn(money);
 		throw expn;
@@ -40,7 +40,7 @@ void WithDrawException::show_exception_reason() {
 	std::cout << "[exception message : " << balance << " not enough remained money]" << "\n";
 }
 
-void Account::with_draw(int money) throw (WithDrawException) {
+void Account::with_draw(int money) {
 	if(money > balance) throw WithDrawException(balance);
 	balance -= money;
 }
